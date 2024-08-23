@@ -1,0 +1,374 @@
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Base font family */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Slightly darker background for a professional look */
+}
+
+header {
+    background-color: #2c3e50; /* Darker color for a sleek appearance */
+    color: #ecf0f1; /* Light color for text */
+    padding: 20px 0; /* Increased padding for better spacing */
+    display: flex;
+    align-items: center;
+    position: relative; /* For absolute positioning of logo */
+}
+
+/* Logo styling */
+.logo {
+    position: absolute; /* Positioning it at the top left */
+    top: 50%;
+    left: 20px; /* Adjust as needed */
+    transform: translateY(-50%); /* Center vertically */
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin-right: 15px; /* Space between logo and text */
+}
+
+.logo span {
+    font-size: 24px;
+    color: #ecf0f1;
+    font-weight: bold;
+}
+
+/* Navigation styling */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Take up remaining space */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a {
+    position: relative; /* Required for the underline effect */
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 600; /* Slightly bolder text for navigation links */
+    padding-bottom: 5px; /* Space for the underline */
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+/* Underline animation */
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ecf0f1; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth transition for the underline */
+}
+
+nav a:hover {
+    color: #bdc3c7; /* Slightly lighter color on hover */
+}
+
+nav a:hover::after {
+    width: 100%; /* Expand underline to full width on hover */
+}
+
+/* Remove hover effect from website name and logo */
+.logo a {
+    color: #ecf0f1; /* Keep the original color for the website name */
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+/* Remove underline effect from logo link */
+.logo a::after {
+    content: none; /* Remove the underline animation */
+}
+
+.login-btn {
+    background-color: #ecf0f1; /* Light background to differentiate from other buttons */
+    color: #2c3e50; /* Dark text color */
+    padding: 10px 20px;
+    border: 1px solid transparent; /* Remove border from buttons */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+}
+
+.login-btn:hover {
+    background-color: #27ae60; /* Darker green on hover */
+    color: #ecf0f1; /* Light color for text on hover */
+    border-color: #2c3e50; /* Add border color on hover for better visual feedback */
+}
+
+#home {
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?nature,environment') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px; /* Padding for better text spacing on smaller screens */
+}
+
+.hero-content h1 {
+    font-size: 4em; /* Increased font size for a stronger impact */
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Enhanced text shadow for readability */
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Enhanced text shadow for readability */
+}
+
+.btn {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 30px; /* Increased padding for a larger button */
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid transparent; /* Remove border from button */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+    background-color: #34495e; /* Darker shade on hover */
+    border-color: #2c3e50; /* Add border color on hover for better visual feedback */
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white; /* White background for content sections */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 2.8em; /* Slightly larger font for section headings */
+    color: #2c3e50;
+    text-align: center; /* Center align headings */
+}
+
+section p {
+    font-size: 1.2em;
+    color: #7f8c8d; /* Lighter color for text */
+    line-height: 1.8; /* Increased line height for better readability */
+}
+
+/* Styling for the Contact Us section */
+.contact-section {
+    background-color: #ecf0f1; /* Light grey background for contrast */
+    border-radius: 10px;
+    padding: 50px 20px; /* Increased padding for better spacing */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.contact-section h2 {
+    margin-bottom: 30px;
+    font-size: 2.5em; /* Slightly larger font for section heading */
+    color: #2c3e50;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    color: #7f8c8d; /* Slightly lighter color for text */
+    margin-bottom: 30px; /* Increased margin for better spacing */
+    text-align: center; /* Center align paragraph */
+}
+
+.contact-form {
+    max-width: 700px; /* Limit the width of the form for a cleaner look */
+    margin: 0 auto; /* Center the form */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px; /* Adjusted margin for spacing */
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 15px; /* Increased padding for better usability */
+    margin-bottom: 20px; /* Spacing between form elements */
+    border: 1px solid #bdc3c7; /* Subtle border for inputs */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em; /* Consistent font size */
+}
+
+.contact-form textarea {
+    height: 200px; /* Fixed height for better readability */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-form button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 25px; /* Increased padding for button */
+    border: none;
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer;
+    font-size: 1.1em; /* Slightly larger font size */
+    width: 100%; /* Full width button */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #34495e; /* Slightly darker color on hover */
+    border-color: #2c3e50; /* Add border color on hover for better visual feedback */
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Increased padding for better spacing */
+}
+
+footer .social-media a img {
+    width: 30px; /* Ensure icons are uniform in size */
+    margin: 0 10px; /* Space between social media icons */
+    transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+footer .social-media a img:hover {
+    transform: scale(1.1); /* Slightly enlarge icons on hover */
+}
+
+/* Styles for the Login Popup */
+#loginPopup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.login-popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow */
+    position: relative;
+}
+
+.login-popup-content h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1.8em;
+}
+
+.login-popup-content label {
+    display: block;
+    margin-top: 10px;
+    color: #2c3e50;
+    font-size: 1em;
+}
+
+.login-popup-content input {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin-top: 5px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.login-popup-content button[type="submit"] {
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.login-popup-content button[type="submit"]:hover {
+    background-color: #34495e;
+}
+
+.login-popup-content p {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.login-popup-content a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.login-popup-content a:hover {
+    text-decoration: underline;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em; /* Smaller font size on mobile */
+    }
+
+    .hero-content p {
+        font-size: 1.2em; /* Smaller font size on mobile */
+    }
+}

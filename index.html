@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALOHRA GENKWIZ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#home" style="display: flex; align-items: center;">
+                    <img src="WhatsApp_Image_2024-08-22_at_21.37.25-removebg-preview.png" alt="ALOHRA GENKWIZ Logo" style="margin-right: 10px; animation: none;"> <!-- Logo with no animation -->
+                    <span style="font-size: 24px; color: #fff; font-weight: bold;">ALOHRA GENKWIZ</span> <!-- Website name next to the logo -->
+                </a>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <button id="loginBtn" class="login-btn">Login</button>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Protect Our Planet</h1>
+            <p>Join us in making a difference. Every action counts.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>We are committed to raising awareness about environmental issues and promoting sustainable practices.</p>
+        <div class="about-image">
+            <img src="about-us-image.jpg" alt="About Us Image">
+        </div>
+    </section>
+
+    <section id="events" class="events-section">
+        <h2>Upcoming Events</h2>
+        <p>Participate in our global events to support environmental causes.</p>
+        <ul class="events-list">
+            <li><strong>Earth Day Cleanup</strong> - April 22, 2024</li>
+            <li><strong>Tree Planting Drive</strong> - June 5, 2024</li>
+            <li><strong>Beach Conservation Workshop</strong> - August 15, 2024</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to get involved? Reach out to us!</p>
+        <form action="contact.php" method="POST" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ALOHRA GENKWIZ. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#"><img src="facebook-removebg-preview.jpg" alt="Facebook"></a>
+            <a href="#"><img src="twitter-removebg-preview.jpg" alt="Twitter"></a>
+            <a href="#"><img src="instagram-removebg-preview.jpg" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <!-- Login Popup -->
+    <div id="loginPopup">
+        <div class="login-popup-content">
+            <button class="close" onclick="closePopup()">&times;</button>
+            <h2>Login or Create Account</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="register.html">Create one here</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
